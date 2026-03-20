@@ -9,13 +9,6 @@ You can download the dataset from Kaggle:
 
 > **Instructions**: Download `sensor.csv` and place it in the same directory as the notebook. The dataset is not included in this repository due to its size.
 
-## Challenge Tasks Covered
-- [x] Plot timeseries of `sensor_00` vs `machine_status` with behavior commentary
-- [x] Correlation heatmap of all sensor readings, handling missing values logically
-- [x] Identify the top 3 sensors as the strongest predictors of failure
-- [x] Classification models (Logistic Regression, Random Forest, and XGBoost — compared)
-- [x] Advanced Sequential Model (LSTM) for continuous failure forecasting
-
 ## Highlights & Key Findings
 - **Data Cleaning**: `sensor_15` had 0 valid readings and was dropped. Missing values in other sensors were imputed using forward fill, avoiding data leakage, followed by backward fill to handle initial gaps.
 - **Exploratory Data Analysis**: The data is highly imbalanced (`NORMAL` 93.4%, `RECOVERING` 6.6%, `BROKEN` <0.01%). Traditional accuracy is a misleading metric here. Instead, Macro-F1 and Precision-Recall curves are used.
